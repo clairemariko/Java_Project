@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
     />
 
+
     <EditText
 
         android:textColor="@color/questioncolor"
@@ -32,5 +33,12 @@
         android:layout_marginTop="70dp"
         android:layout_marginLeft="120dp"
         android:background= "@null"/>
+
+    <TextView
+        android:textSize="15sp"
+        android:textColor="@color/questioncolor"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:id="@+id/text_noquestion"/>
 
 </LinearLayout>

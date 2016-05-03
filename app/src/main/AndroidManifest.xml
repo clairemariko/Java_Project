@@ -9,6 +9,7 @@
         android:theme="@style/AppTheme">
 
 
+
         <activity
             android:name="example.codeclan.com.eightball.EightBall"
             android:label="@string/app_header">
@@ -18,10 +19,17 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="example.codeclan.com.eightball.AnswerDetails"
-            android:label="@string/app_header"
-            android:parentActivityName=".EightBall">
+        <activity
+            android:name="example.codeclan.com.eightball.AnswerDetails"
+            android:label="@string/app_header">
+            android:parentActivityName="example.codeclan.com.eightball.EightBall"
         </activity>
+
+        <activity android:name="example.codeclan.com.eightball.Landing"
+            android:label="@string/app_header">
+            android:parentActivityName="example.codeclan.com.eightball.EightBall"
+        </activity>
+
 
 
 

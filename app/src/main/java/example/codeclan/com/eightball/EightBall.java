@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
 
 /**
  * Created by user on 02/05/2016.
@@ -17,6 +19,8 @@ public class EightBall extends AppCompatActivity {
 
     ImageButton mMainButton;
     EditText mQuestionInput;
+    TextView mDefaultMessage;
+
 
 
 
@@ -29,6 +33,7 @@ public class EightBall extends AppCompatActivity {
 
         mMainButton = (ImageButton) findViewById(R.id.main_button);
         mQuestionInput = (EditText) findViewById(R.id.main_question);
+        mDefaultMessage =(TextView) findViewById(R.id.text_noquestion);
 
 
 
@@ -37,12 +42,28 @@ public class EightBall extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d("EightBall:", "submit button clicked!");
 
-                Intent ClickedButton = new Intent (EightBall.this, AnswerDetails.class);
+                String userInput= mQuestionInput.getText().toString();
 
-                ClickedButton.putExtra("question", mQuestionInput.getText().toString());
+                mDefaultMessage =(TextView) findViewById(R.id.text_noquestion);
 
-                startActivity(ClickedButton);
+                if (userInput.equals("")) {
+                    mDefaultMessage.setText("Question enter you have not!");
+
+
+
+                } else {
+
+                    Intent ClickedButton = new Intent (EightBall.this, AnswerDetails.class);
+
+                    ClickedButton.putExtra("question", userInput);
+
+                    startActivity(ClickedButton);
+
+                }
             }
+
         });
     }
+
+
 }
