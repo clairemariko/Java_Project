@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+
 import java.util.Random;
 
 /**
@@ -16,10 +16,13 @@ public class AnswerDetails extends AppCompatActivity {
 
 
     String answers[] = {
-            "come back to me another day",
-            "yes",
-            "no",
-            "maybe"
+            "Always pass on what you have learned",
+            "Patience you must have young Padawan",
+            "Must unlearn what you have learned",
+            "Do or do not. There is no try",
+            "May the Force be with you",
+            "Difficult to see. Always in the motion the future",
+            "Use your feelings Obi-Wan find him you will"
     };
 
 

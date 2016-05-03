@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/starsky">
 
 
     <TextView
@@ -12,19 +13,24 @@
     />
 
     <EditText
+
+        android:textColor="@color/questioncolor"
         android:id="@+id/main_question"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
-        android:hint="Question" />
+        android:hint="@string/question_bar"
+        android:textColorHint="@color/defaultquestion"/>
 
-    <Button
+    <ImageButton
+        android:layout_marginRight="20dp"
+        android:src="@drawable/yodanobackground"
         android:id="@+id/main_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="250dp"
-        android:text="@string/button" />
+        android:layout_width="220dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="120dp"
+        android:background= "@null"/>
 
 </LinearLayout>

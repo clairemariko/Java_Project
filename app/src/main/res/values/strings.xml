@@ -2,4 +2,8 @@
     <string name="app_name">EightBall</string>
     <string name="app_header">Magic Eight Ball</string>
     <string name="button">Ask Away</string>
+    <string name="question_bar">Question ask you can</string>
+
+
+
 </resources>

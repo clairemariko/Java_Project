@@ -8,13 +8,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 /**
  * Created by user on 02/05/2016.
  */
 public class EightBall extends AppCompatActivity {
 
-    Button mMainButton;
+    ImageButton mMainButton;
     EditText mQuestionInput;
 
 
@@ -26,7 +27,7 @@ public class EightBall extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        mMainButton = (Button) findViewById(R.id.main_button);
+        mMainButton = (ImageButton) findViewById(R.id.main_button);
         mQuestionInput = (EditText) findViewById(R.id.main_question);
 
 
