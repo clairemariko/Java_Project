@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="#2f2828">
 
-    <MultiAutoCompleteTextView
+    <TextView
 
         android:layout_marginLeft="18dp"
         android:backgroundTint="#64ebeef4"
