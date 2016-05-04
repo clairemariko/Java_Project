@@ -80,7 +80,7 @@ public class Yoda extends AppCompatActivity {
         View customToastLayout = customInflator.inflate(R.layout.custom_toast_layout, (ViewGroup) findViewById(R.id.toast_layout_container));
 
         TextView customText =(TextView) customToastLayout.findViewById(R.id.custom_toast_text);
-        customText.setText("toast is working");
+        customText.setText("ENTER QUESTION YOU MUST!");
 
 
         Toast customToast = new Toast(getApplicationContext());
