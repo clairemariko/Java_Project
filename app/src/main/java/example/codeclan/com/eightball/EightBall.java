@@ -1,8 +1,10 @@
 package example.codeclan.com.eightball;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,17 +47,23 @@ public class EightBall extends AppCompatActivity {
                 String userInput= mEightBallInput.getText().toString();
 
                 shakeSoundMP.start();
-                customToast();
 
-
-
-                mEightBallDefault =(TextView) findViewById(R.id.text_noquestion);
-
-                mEightBallDefault = (TextView) findViewById(R.id.eightballanswer);
-                mEightBallDefault.setText( createResponse() );
+                if(userInput.equals("")) {
+                    customToast();
                 }
-             });
-         }
+                else {
+
+//
+
+//                    mEightBallDefault = (TextView) findViewById(R.id.eightballanswer);
+                    mEightBallDefault.setText(createResponse());
+                }
+            }
+        });
+    }
+
+
+
 
 
     public String createResponse() {
@@ -84,11 +92,7 @@ public class EightBall extends AppCompatActivity {
         mEightBallInput = (EditText) findViewById(R.id.eightballinput);
         String question = mEightBallInput.getText().toString();
 
-        if( question.equals("")){
 
-
-//            return "Ask a question above";
-        }
         if( question.toLowerCase().contains("lovecrumbs")){
             return "Yes and remind Claire to bring her travel mug";
         }
@@ -113,10 +117,14 @@ public class EightBall extends AppCompatActivity {
         LayoutInflater customInflator = getLayoutInflater();
         View customToastLayout = customInflator.inflate(R.layout.custom_toast_layout, (ViewGroup) findViewById(R.id.toast_layout_container));
 
+
+        TextView customText =(TextView) customToastLayout.findViewById(R.id.custom_toast_text);
+        customText.setText("ENTER QUESTION YOU MUST!");
+
         Toast customToast = new Toast(getApplicationContext());
-        customToast.setDuration(Toast.LENGTH_SHORT);
+        customToast.setDuration(Toast.LENGTH_LONG);
         customToast.setView(customToastLayout);
-        customToast.setGravity(Gravity.TOP | Gravity.CENTER, 0, 0);
+        customToast.setGravity(Gravity.BOTTOM | Gravity.CENTER, 0, 0);
         customToast.show();
         }
 

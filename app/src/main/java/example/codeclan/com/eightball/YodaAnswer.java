@@ -22,8 +22,16 @@ public class YodaAnswer extends AppCompatActivity {
             "Do or do not. There is no try",
             "May the Force be with you",
             "Difficult to see. Always in the motion the future",
-            "Use your feelings Obi-Wan find him you will"
+            "Use your feelings Obi-Wan find him you will",
+            "It is decidedly so",
+            "Without a doubt",
+            "Yes, definitely",
+            "You may rely on it",
+            "As I see it, yes",
+            "Cannot predict now"
     };
+
+
 
 
     @Override

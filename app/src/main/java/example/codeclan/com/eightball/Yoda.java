@@ -2,6 +2,7 @@ package example.codeclan.com.eightball;
 
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -36,6 +37,8 @@ public class Yoda extends AppCompatActivity {
 
         setContentView(R.layout.activity_yoda);
 
+        final MediaPlayer hmmSoundMP = MediaPlayer.create(this, R.raw.hmmmm);
+
 
 
         mMainButton = (ImageButton) findViewById(R.id.main_button);
@@ -53,6 +56,8 @@ public class Yoda extends AppCompatActivity {
                 String userInput= mQuestionInput.getText().toString();
 
                 mDefaultMessage =(TextView) findViewById(R.id.text_noquestion);
+
+                hmmSoundMP.start();
 
                 if (userInput.equals("")) {
                     customToast();
@@ -84,7 +89,7 @@ public class Yoda extends AppCompatActivity {
 
 
         Toast customToast = new Toast(getApplicationContext());
-        customToast.setDuration(Toast.LENGTH_SHORT);
+        customToast.setDuration(Toast.LENGTH_LONG);
         customToast.setView(customToastLayout);
         customToast.setGravity(Gravity.BOTTOM| Gravity.CENTER_HORIZONTAL, 0, 0);
         customToast.show();

@@ -26,7 +26,7 @@
 
     <TextView
         android:id="@+id/eightballanswer"
-        android:hint="Click on the 8Ball to reveal your answer"
+        
         android:textSize="20sp"
         android:textColorHint="#fefefe"
         android:textColor="#f4eeee"
