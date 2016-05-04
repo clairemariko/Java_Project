@@ -29,6 +29,8 @@ public class EightBall extends AppCompatActivity {
 
         setContentView(R.layout.activity_eightball);
 
+        final MediaPlayer shakeSoundMP = MediaPlayer.create(this, R.raw.shake);
+
         mEightBallButton = (ImageButton) findViewById(R.id.eightballbutton);
         mEightBallInput = (EditText) findViewById(R.id.eightballinput);
         mEightBallDefault =(TextView) findViewById(R.id.eightballanswer);
@@ -37,6 +39,8 @@ public class EightBall extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 String userInput= mEightBallInput.getText().toString();
+
+                shakeSoundMP.start();
 
                 mEightBallDefault =(TextView) findViewById(R.id.text_noquestion);
 
