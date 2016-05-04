@@ -13,26 +13,30 @@ import android.widget.ImageButton;
 public class Landing extends AppCompatActivity {
 
 
-    ImageButton mYodaButton;
+    ImageButton mStarWarsButton;
+    ImageButton mEightBallButton;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_landing);
 
-        mYodaButton = (ImageButton) findViewById(R.id.yoda_button);
+        mStarWarsButton = (ImageButton) findViewById(R.id.row_image_starwars);
+        mEightBallButton =(ImageButton) findViewById(R.id.ball_row_image);
 
-        mYodaButton.setOnClickListener(new View.OnClickListener() {
+        mStarWarsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("Landing:", "submit button clicked!");
 
-                Intent ClickedButton = new Intent(Landing.this, AnswerDetails.class);
+                Intent ClickedButton = new Intent(Landing.this, YodaAnswer.class);
 
                 startActivity(ClickedButton);
             }
+
+
 
 
         });

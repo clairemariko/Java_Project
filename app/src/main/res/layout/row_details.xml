@@ -6,7 +6,7 @@
     android:background="#f2f9f6">
 
 
-        <ImageView
+        <ImageButton
         android:id="@+id/row_image_starwars"
         android:layout_width="95dp"
         android:layout_height="95dp"
@@ -35,7 +35,7 @@
         android:layout_marginTop="15dp"
         android:layout_below="@id/row_text_stawrwars_name"/>
 
-    <ImageView
+    <ImageButton
         android:layout_marginTop="20dp"
         android:id="@+id/ball_row_image"
         android:layout_width="75dp"
@@ -69,3 +69,5 @@
         android:paddingLeft="20dp"
         android:layout_marginTop="15dp"
         android:layout_below="@id/row_text_name"/>
+
+    </RelativeLayout>

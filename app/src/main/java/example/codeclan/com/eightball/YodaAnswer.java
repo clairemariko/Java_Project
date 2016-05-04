@@ -10,7 +10,7 @@ import java.util.Random;
 /**
  * Created by user on 02/05/2016.
  */
-public class AnswerDetails extends AppCompatActivity {
+public class YodaAnswer extends AppCompatActivity {
 
     TextView mAnswerText;
 

@@ -11,7 +11,7 @@
 
 
         <activity
-            android:name="example.codeclan.com.eightball.EightBall"
+            android:name=".Yoda"
             android:label="@string/app_header">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -20,7 +20,7 @@
         </activity>
 
         <activity
-            android:name="example.codeclan.com.eightball.AnswerDetails"
+            android:name=".YodaAnswer"
             android:label="@string/app_header">
             android:parentActivityName="example.codeclan.com.eightball.EightBall"
         </activity>
