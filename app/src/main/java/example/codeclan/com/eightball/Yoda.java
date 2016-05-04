@@ -5,11 +5,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -24,6 +28,7 @@ public class Yoda extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         Log.d("Yoda:", "onCreateCalled");
@@ -31,9 +36,12 @@ public class Yoda extends AppCompatActivity {
 
         setContentView(R.layout.activity_yoda);
 
+
+
         mMainButton = (ImageButton) findViewById(R.id.main_button);
         mQuestionInput = (EditText) findViewById(R.id.main_question);
         mDefaultMessage =(TextView) findViewById(R.id.text_noquestion);
+
 
 
 
@@ -47,7 +55,8 @@ public class Yoda extends AppCompatActivity {
                 mDefaultMessage =(TextView) findViewById(R.id.text_noquestion);
 
                 if (userInput.equals("")) {
-                    mDefaultMessage.setText("Question enter you have not!");
+                    customToast();
+//                    mDefaultMessage.setText("Question enter you have not!");
 
 
 
@@ -63,6 +72,22 @@ public class Yoda extends AppCompatActivity {
             }
 
         });
+    }
+
+
+    private void customToast(){
+        LayoutInflater customInflator = getLayoutInflater();
+        View customToastLayout = customInflator.inflate(R.layout.custom_toast_layout, (ViewGroup) findViewById(R.id.toast_layout_container));
+
+        TextView customText =(TextView) customToastLayout.findViewById(R.id.custom_toast_text);
+        customText.setText("toast is working");
+
+
+        Toast customToast = new Toast(getApplicationContext());
+        customToast.setDuration(Toast.LENGTH_SHORT);
+        customToast.setView(customToastLayout);
+        customToast.setGravity(Gravity.TOP | Gravity.CENTER, 0, 0);
+        customToast.show();
     }
 
 

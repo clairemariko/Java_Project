@@ -3,7 +3,10 @@ package example.codeclan.com.eightball;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -11,6 +14,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Random;
 import android.media.MediaPlayer;
+import android.widget.Toast;
 
 /**
  * Created by user on 04/05/2016.
@@ -41,6 +45,9 @@ public class EightBall extends AppCompatActivity {
                 String userInput= mEightBallInput.getText().toString();
 
                 shakeSoundMP.start();
+                customToast();
+
+
 
                 mEightBallDefault =(TextView) findViewById(R.id.text_noquestion);
 
@@ -77,8 +84,10 @@ public class EightBall extends AppCompatActivity {
         mEightBallInput = (EditText) findViewById(R.id.eightballinput);
         String question = mEightBallInput.getText().toString();
 
-        if( question.matches("")){
-            return "Ask a question above";
+        if( question.equals("")){
+
+
+//            return "Ask a question above";
         }
         if( question.toLowerCase().contains("lovecrumbs")){
             return "Yes and remind Claire to bring her travel mug";
@@ -97,6 +106,18 @@ public class EightBall extends AppCompatActivity {
             int result = random.nextInt(mAnswers.size());
             return mAnswers.get(result);
         }
+        }
+
+
+    private void customToast(){
+        LayoutInflater customInflator = getLayoutInflater();
+        View customToastLayout = customInflator.inflate(R.layout.custom_toast_layout, (ViewGroup) findViewById(R.id.toast_layout_container));
+
+        Toast customToast = new Toast(getApplicationContext());
+        customToast.setDuration(Toast.LENGTH_SHORT);
+        customToast.setView(customToastLayout);
+        customToast.setGravity(Gravity.TOP | Gravity.CENTER, 0, 0);
+        customToast.show();
         }
 
 
