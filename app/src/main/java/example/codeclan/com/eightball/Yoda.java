@@ -61,7 +61,7 @@ public class Yoda extends AppCompatActivity {
 
                 if (userInput.equals("")) {
                     customToast();
-//                    mDefaultMessage.setText("Question enter you have not!");
+
 
 
 

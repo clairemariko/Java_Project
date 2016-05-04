@@ -9,6 +9,8 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -47,6 +49,7 @@ public class EightBall extends AppCompatActivity {
                 String userInput= mEightBallInput.getText().toString();
 
                 shakeSoundMP.start();
+                rotate(view);
 
                 if(userInput.equals("")) {
                     customToast();
@@ -127,6 +130,11 @@ public class EightBall extends AppCompatActivity {
         customToast.setGravity(Gravity.BOTTOM | Gravity.CENTER, 0, 0);
         customToast.show();
         }
+
+    public void rotate(View view){
+        Animation rotate = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
+        mEightBallButton.startAnimation(rotate);
+    }
 
 
     }
