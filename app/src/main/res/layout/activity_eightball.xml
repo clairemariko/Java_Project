@@ -15,8 +15,9 @@
         android:hint="Enter your question here"/>
 
     <ImageButton
+        android:id="@+id/eightballbutton"
         android:src="@drawable/editedeightball"
-        
+        android:background="#BF000000"
         android:layout_marginLeft="80dp"
         android:layout_marginTop="80dp"
         android:layout_width="wrap_content"

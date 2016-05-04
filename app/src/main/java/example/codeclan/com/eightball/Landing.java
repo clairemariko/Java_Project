@@ -26,19 +26,28 @@ public class Landing extends AppCompatActivity {
         mStarWarsButton = (ImageButton) findViewById(R.id.row_image_starwars);
         mEightBallButton =(ImageButton) findViewById(R.id.ball_row_image);
 
+
+
         mStarWarsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("Landing:", "submit button clicked!");
 
-                Intent ClickedButton = new Intent(Landing.this, YodaAnswer.class);
+                Intent ClickedButton = new Intent(Landing.this, Yoda.class);
 
                 startActivity(ClickedButton);
             }
+        });
 
+        mEightBallButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("Landing:", "submit button clicked!");
 
+                Intent ClickedButton = new Intent(Landing.this, EightBall.class);
 
-
+                startActivity(ClickedButton);
+            }
         });
 
     }

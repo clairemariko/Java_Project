@@ -11,7 +11,7 @@
 
 
         <activity
-            android:name=".Yoda"
+            android:name=".Landing"
             android:label="@string/app_header">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -20,15 +20,26 @@
         </activity>
 
         <activity
-            android:name=".YodaAnswer"
+            android:name=".Yoda"
             android:label="@string/app_header">
-            android:parentActivityName="example.codeclan.com.eightball.EightBall"
+            android:parentActivityName="example.codeclan.com.eightball.Landing"
         </activity>
 
-        <activity android:name="example.codeclan.com.eightball.Landing"
+        <activity
+            android:name=".YodaAnswer"
             android:label="@string/app_header">
-            android:parentActivityName="example.codeclan.com.eightball.EightBall"
+            android:parentActivityName="example.codeclan.com.eightball.Yoda"
         </activity>
+
+        <activity
+            android:name=".EightBall"
+            android:label="@string/app_header">
+            android:parentActivityName="example.codeclan.com.eightball.Landing"
+        </activity>
+
+
+
+
 
 
 

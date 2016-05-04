@@ -14,15 +14,82 @@
         android:layout_height="wrap_content"
         android:text="SELECT WHICH MENTOR YOU WHICH TO SEEK ADVICE FROM"/>
 
-    <ListView
-
-        android:id="@+id/eightballs_list_view"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="20dp"/>
+        android:background="#2f2828">
+
+    <ImageButton
+        android:id="@+id/row_image_starwars"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:src="@drawable/starwars"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"/>
+    <TextView
+        android:text="YODA"
+        android:textSize="20dp"
+        android:textColor="#f0ecec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/row_text_stawrwars_name"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/row_image_starwars"
+        android:layout_alignTop="@id/row_image_starwars"/>
+    <TextView
+        android:text="He may not make much sense"
+        android:textSize="20dp"
+        android:textColor="#f0ecec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/row_text_yoda"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/row_image_starwars"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/row_text_stawrwars_name"/>
+
+    <ImageButton
+        android:layout_marginTop="20dp"
+        android:id="@+id/ball_row_image"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/magic8ball"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/row_image_starwars"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"/>
+
+    <TextView
+        android:text="CLASSIC"
+        android:textSize="20dp"
+        android:textColor="#f0ecec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/row_text_name"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="15dp"
+        android:layout_toRightOf="@id/ball_row_image"
+        android:layout_alignTop="@id/ball_row_image"/>
+
+    <TextView
+        android:text="Let see what I see"
+        android:textSize="20dp"
+        android:textColor="#f0ecec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/row_text_description"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/ball_row_image"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/row_text_name"/>
 
 
 
-    </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
 
