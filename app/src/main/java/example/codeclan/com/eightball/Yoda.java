@@ -86,7 +86,7 @@ public class Yoda extends AppCompatActivity {
         Toast customToast = new Toast(getApplicationContext());
         customToast.setDuration(Toast.LENGTH_SHORT);
         customToast.setView(customToastLayout);
-        customToast.setGravity(Gravity.TOP | Gravity.CENTER, 0, 0);
+        customToast.setGravity(Gravity.BOTTOM| Gravity.CENTER_HORIZONTAL, 0, 0);
         customToast.show();
     }
 
