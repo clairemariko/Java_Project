@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/explodingstar">
+
+    <EditText
+        android:id="@+id/eightballinput"
+        android:backgroundTint="#80FFFFFF"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="45dp"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:textColorHint="#fefefe"
+        android:hint="Enter your question here"/>
+
+    <ImageButton
+        android:src="@drawable/editedeightball"
+        
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/eightballanswer"
+        android:hint="Click on the 8Ball to reveal your answer"
+        android:textSize="20sp"
+        android:textColorHint="#fefefe"
+        android:backgroundTint="#80FFFFFF"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="45dp"/>
+
+
+
+
+
+
+
+</LinearLayout>

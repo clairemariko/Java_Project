@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="questioncolor">#ffffff</color>
     <color name="defaultquestion">#ffffff</color>
+    <color name="backgroundcolor">#eed8ae</color>
 </resources>
