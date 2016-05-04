@@ -14,7 +14,7 @@
         android:paddingLeft="100dp"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:text=" WELCOME">
+        android:text=" WELCOME"/>
 
     <TextView
         android:background="#4ECDC4"
@@ -46,7 +46,7 @@
     <TextView
         android:text="YODA"
         android:textSize="20dp"
-        android:textColor="FFE66D"
+        android:textColor="#FFE66D"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/row_text_stawrwars_name"
@@ -80,7 +80,7 @@
     <TextView
         android:text="CLASSIC"
         android:textSize="20dp"
-        android:textColor="FFE66D"
+        android:textColor="#FFE66D"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/row_text_name"

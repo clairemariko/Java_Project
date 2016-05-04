@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">EightBall</string>
+    <string name="app_name">See Your Future</string>
     <string name="app_header">Yoda Insight</string>
+    <string name="app_ball_header">8Ball</string>
 
     <string name="button">Ask Away</string>
     <string name="question_bar">Question ask, click on me</string>
