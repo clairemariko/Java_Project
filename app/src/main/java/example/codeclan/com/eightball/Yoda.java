@@ -61,11 +61,10 @@ public class Yoda extends AppCompatActivity {
 
                 if (userInput.equals("")) {
                     customToast();
+                }
 
 
-
-
-                } else {
+                else {
 
                     Intent ClickedButton = new Intent (Yoda.this, YodaAnswer.class);
 
