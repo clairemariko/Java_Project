@@ -2,51 +2,54 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C6EFEA">
+    android:background="#C6EFEA"
+    android:weightSum="1">
 
     <TextView
 
         android:layout_marginLeft="18dp"
-        android:background="#4ECDC4"
+        android:background="#994ECDC4"
         android:layout_marginTop="50dp"
         android:textColor="#FF6B6B"
-        android:textSize="25sp"
+        android:textSize="35sp"
         android:paddingLeft="100dp"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:text=" WELCOME"/>
 
     <TextView
-        android:background="#4ECDC4"
+
+        android:background="#994ECDC4"
         android:paddingTop="20dp"
-        android:textSize="15sp"
+        android:textSize="25sp"
         android:layout_marginLeft="18dp"
 
         android:layout_marginTop="10dp"
         android:textColor="#FF6B6B"
         android:layout_width="350dp"
-        android:layout_height="100dp"
-        android:text="SELECT WHICH 8BALL THEME YOU WISH TO USE. BECAREFULL SOME MENTORS ARE TRICKY CHARACTERS."/>
+        android:layout_height="187dp"
+        android:text="SELECT WHICH 8BALL THEME YOU WISH TO USE. BECAREFULL SOME MENTORS ARE TRICKY CHARACTERS." />
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
         android:layout_marginLeft="18dp"
         android:layout_width="350dp"
         android:layout_height="match_parent"
-        android:background="#4ECDC4">
+        android:background="#994ECDC4">
 
     <ImageButton
         android:id="@+id/row_image_starwars"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:src="@drawable/starwars"
-        android:layout_marginLeft="20dp"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
         android:scaleType="centerInside"
-        android:background="@null"/>
+        android:background="@null"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/row_text_name"
+        android:layout_toLeftOf="@+id/row_text_name" />
     <TextView
         android:text="YODA"
-        android:textSize="20dp"
+        android:textSize="25sp"
         android:textColor="#FFE66D"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,21 +70,19 @@
         android:layout_below="@id/row_text_stawrwars_name"/>
 
     <ImageButton
-        android:layout_marginTop="20dp"
         android:id="@+id/ball_row_image"
         android:layout_width="70dp"
         android:layout_height="68dp"
         android:src="@drawable/magic8ball"
-        android:layout_marginLeft="20dp"
-        android:layout_below="@id/row_image_starwars"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
         android:scaleType="centerInside"
-        android:background="@null"/>
+        android:background="@null"
+        android:layout_below="@+id/row_text_yoda"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="CLASSIC"
-        android:textSize="20dp"
+        android:textSize="25sp"
         android:textColor="#FFE66D"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
