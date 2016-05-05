@@ -42,7 +42,8 @@
         android:layout_marginLeft="20dp"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:scaleType="centerInside"/>
+        android:scaleType="centerInside"
+        android:background="@null"/>
     <TextView
         android:text="YODA"
         android:textSize="20dp"
@@ -75,7 +76,8 @@
         android:layout_below="@id/row_image_starwars"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:scaleType="centerInside"/>
+        android:scaleType="centerInside"
+        android:background="@null"/>
 
     <TextView
         android:text="CLASSIC"
