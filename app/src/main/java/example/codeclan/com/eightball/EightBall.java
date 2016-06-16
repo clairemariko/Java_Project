@@ -99,8 +99,8 @@ public class EightBall extends AppCompatActivity {
         if( question.toLowerCase().contains("lovecrumbs")){
             return "Yes and remind Claire to bring her travel mug";
         }
-        if( question.toLowerCase().contains("lion bar")){
-            return "No you should chose a better chocolate bar";
+        if( question.toLowerCase().contains("language")){
+            return "PHP of course, do you need to ask";
         }
         if ((question.toLowerCase().contains("spy") || question.toLowerCase().contains("resistance"))){
             return "You are always a spy";
@@ -117,13 +117,15 @@ public class EightBall extends AppCompatActivity {
 
 
     private void customToast(){
+        //setting the style
         LayoutInflater customInflator = getLayoutInflater();
         View customToastLayout = customInflator.inflate(R.layout.custom_toast_layout, (ViewGroup) findViewById(R.id.toast_layout_container));
 
-
+        //setting the text
         TextView customText =(TextView) customToastLayout.findViewById(R.id.custom_toast_text);
         customText.setText("ENTER QUESTION YOU MUST!");
 
+        //creating the toast
         Toast customToast = new Toast(getApplicationContext());
         customToast.setDuration(Toast.LENGTH_LONG);
         customToast.setView(customToastLayout);
